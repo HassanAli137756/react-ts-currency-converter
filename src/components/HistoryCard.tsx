@@ -21,7 +21,8 @@ function HistoryCard({histories}:HistoryProps)
             {
                 return(
                 <div key={history.id}>
-                    <div className=" rounded-2xl  pl-2 bg-black p-6 ">
+                    <div  className=" rounded-2xl pl-2 bg-black p-6 flex justify-center ">
+                    <div>
 
                         <div>
                             <div className="font-bold text-2xl italic underline text-green-500">
@@ -30,7 +31,7 @@ function HistoryCard({histories}:HistoryProps)
                         </div>
                         <br />
 
-                        <div className="font font-semibold text-xl  ">
+                        <div className="font text-white/50 font-semibold text-xl  ">
                             <div>From-Country: &nbsp;&nbsp; <span>{history.fromCountry}</span></div> <br />
                             <div>To-Country: &nbsp;&nbsp; <span>{history.toCountry}</span></div> <br />
                             <div>Input-Currency: &nbsp;&nbsp; <span>{history.valueToConvert}</span></div> <br />
@@ -46,6 +47,7 @@ function HistoryCard({histories}:HistoryProps)
                         </div>
 
                     </div>
+                </div>
                 </div>
                 )
             }

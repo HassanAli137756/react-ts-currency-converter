@@ -164,7 +164,7 @@ export function Converter()
             <br /><br />
 
             <div className="flex justify-center">
-                <div  className="w-1/2">
+                <div>
                     <input
                     className=" font-bold text-2xl bg-gray-700 text-white rounded-2xl p-2 pl-3 "
                     value={valueToConvert}
@@ -174,12 +174,12 @@ export function Converter()
             </div>
             <br /><br />
             <div>
-                <div>
+                <div className="flex justify-center">
                     <button 
                     onClick={() => handleConversion()}
-                    className={`rounded-2xl font-bold bg-black p-2.5 text-white w-1/4 text-2xl ${loading ? 'bg-white/50 text-black/50' : ''} `}
+                    className={`rounded-2xl font-bold bg-black p-2.5 text-white w-1/4 text-2xl ${loading ? 'bg-gray-500 text-black/50' : ''} `}
                     >
-                        {loading ? 'loading...' : apiData.result == 'success' ? 'Convert' : 'Error'}
+                        {loading ? 'Loading...' : apiData.result == 'success' ? 'Convert' : 'Error'}
                     </button>
                 </div>
             </div>

@@ -50,16 +50,16 @@ function Logout()
   return (
     <div>
         <div className="flex justify-center">
-            <div>
+        <div className="bg-black/50 rounded-2xl p-13">
                 
         <div className="flex justify-center">
 
-            <div className="font-bold text-3xl italic text-cyan-700">Enter Captcha To LogOut</div>
+            <div className="font-bold text-3xl italic text-cyan-900">Enter Captcha To LogOut</div>
 
         </div>
         <br /><br />
 
-        <div className="rounded-2xl bg-white/50 p-15 ">
+        <div className="rounded-2xl p-15 ">
         <div className="font-bold text-2xl select-none bg-white text-black rounded-2xl p-2 ">
             {targetedCaptcha}
         </div>

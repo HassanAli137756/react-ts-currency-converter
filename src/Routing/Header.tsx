@@ -29,14 +29,14 @@ function Header()
 
   return(
     <div>
-        <div className="p-6 font-bold flex justify-evenly gap-10 bg-pink-400 ">
+        <div className="p-4 font-bold flex justify-evenly gap-10 bg-black ">
         {
             links.map(link =>
             {
                 return(
                 <NavLink
                 to={link.path}
-                className={({isActive}) => `font-bold text-2xl ${isActive ? 'text-cyan-500' : 'text-white'}`}
+                className={({isActive}) => `font-bold text-2xl  ${isActive ? 'text-cyan-500' : 'text-white'} hover:text-cyan-200  transition-all duration-300`}
                 >
                     {link.name}
                 </NavLink>

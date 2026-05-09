@@ -32,7 +32,7 @@ function Login()
     <div>
         <div className="flex  justify-center">
         
-        <div className="rounded-2xl p-10 w-1/2 bg-white/50 ">    
+        <div className="rounded-2xl p-10 w-1/2 bg-black/50 ">    
         <form onSubmit={handleSubmit(createAccount)}>
             <Input
             label="Name"
