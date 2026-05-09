@@ -1,20 +1,25 @@
-# Advanced Todo & Currency Management System
+# 🌍 CurrenXpert Pro (React + TypeScript)
 
-A professional web application built with **React**, **TypeScript**, and **Redux Toolkit**.
+A high-performance currency conversion application built with a focus on speed, type-safety, and user experience. This app allows users to convert currencies in real-time and track their conversion history.
 
-## 🚀 Features
-- **Todo Management:** Add tasks with categories (Work-out, Fun, Study) and priority levels (Low, Medium, High).
-- **State Persistence:** Uses LocalStorage to keep your data safe even after page refresh.
-- **Currency Converter:** Real-time exchange rates integration using External API.
-- **Authentication:** Custom login/logout flow with Captcha validation for security.
-- **Modern UI:** Styled with Tailwind CSS for a sleek, responsive design.
+## ✨ Key Features
+*   **Real-time Conversion:** Fetches accurate, live exchange rates for global currencies.
+*   **User Authentication:** A custom-built Login/Logout system with Captcha security.
+*   **Conversion History:** Automatically saves and displays your recent conversion logs.
+*   **Data Persistence:** Uses Local Storage to keep your login session and history safe even after page refresh.
+*   **Responsive UI:** Fully optimized for all screen sizes (Mobile, Tablet, Desktop).
 
 ## 🛠️ Tech Stack
-- **Frontend:** React.js, TypeScript
-- **State Management:** Redux Toolkit
-- **Form Handling:** React Hook Form
-- **Routing:** React Router Dom
-- **Styling:** Tailwind CSS
+*   **Frontend:** React.js (Vite)
+*   **Language:** TypeScript (for robust, bug-free code)
+*   **State Management:** Redux Toolkit
+*   **Form Handling:** React Hook Form
+*   **Styling:** Modern CSS (Responsive Design)
 
+## 🚀 Getting Started
+1. **Clone the repo:** `git clone https://github.com`
+2. **Install dependencies:** `npm install`
+3. **Run the app:** `npm run dev`
 
-
+---
+**Developed with ❤️ by Hassan Ali**
