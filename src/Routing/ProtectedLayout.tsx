@@ -1,34 +1,51 @@
+
+
 import { useSelector } from "react-redux"
-import type { loginStructure } from "../Redux/AuhtSlice"
-import Layout from "./Layout"
-import Login from "../AuthService/Login"
+import LayOut from "./Layout"
+import type { loginStructure } from "../Redux/AuthSlice"
+import Login from "../AutherService/Login"
 
 
-function ProtectedLayout()
+
+
+function ProtectedLayout() 
 {
-    const userData:loginStructure = useSelector((state: any) => state.authReducer.loginData)
-
-
-    if(userData.email.length > 0 && userData.name.length > 0 && userData.password.length > 0)
+    const userData:loginStructure = useSelector((state:any) => state.authReducer.loginData)
+    
+    if(!window.navigator.onLine)
     {
+        
         return(
-        <div>
-            <Layout />
+        <div className="flex justify-center text-3xl text-red-600 italic font-bold">
+            <div>Please Make Sure Your Internet Connection</div>
         </div>
         )
     }
-    return(
-    <div>
-        <br /><br /><br />
-        <div className="font-bold text-2xl italic flex justify-center text-red-600">
-            <div>
-                Please login to use service
-            </div>
+    else if(userData.email.length > 0 && userData.name.length > 0)
+    {
+        return(
+        <div>
+            <LayOut />
         </div>
-        <br /><br />
-        <Login />
-    </div>
-    )
+        )
+    }
+    else
+    {
+        
+        return(
+        <div >
+            <div className="flex justify-center">
+            <div
+            className=" w-full text-3xl text-red-600 italic font-bold">
+                Please Login To Use Service
+            </div>
+            </div>
+            <br /><br />
+            <Login />
+        </div>
+        )
+    }
 }
 
 export default ProtectedLayout
+

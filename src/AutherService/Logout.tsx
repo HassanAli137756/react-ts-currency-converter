@@ -1,10 +1,12 @@
+
 import { useEffect, useState } from "react"
 import { useDispatch } from "react-redux"
-import { logout } from "../Redux/AuhtSlice"
-import Input from "../components/Input"
-import { useForm } from "react-hook-form"
-import Button from "../components/Button"
 import { useNavigate } from "react-router"
+import { useForm } from "react-hook-form"
+import { logout } from "../Redux/AuthSlice"
+import Input from "../components/Input"
+
+
 
 
 function Logout()
@@ -34,9 +36,7 @@ function Logout()
 
     const deleteAccout = (data: any) =>
     {
-        console.log(data);
-        
-        if(targetedCaptcha == data.captcha)
+        if(targetedCaptcha === data.captcha)
         {
             dispatch(logout())
             navigate('/login')
@@ -49,18 +49,18 @@ function Logout()
 
   return (
     <div>
-        <div className="flex justify-center ">
+        <div className="flex justify-center">
             <div>
                 
         <div className="flex justify-center">
 
-            <div className="font-bold text-2xl italic text-cyan-700">Enter Captcha To LogOut</div>
+            <div className="font-bold text-3xl italic text-cyan-700">Enter Captcha To LogOut</div>
 
         </div>
         <br /><br />
 
-        <div className="rounded-2xl bg-black/50 p-15 ">
-        <div className="font-bold select-none text-2xl bg-white text-black rounded-2xl p-2 ">
+        <div className="rounded-2xl bg-white/50 p-15 ">
+        <div className="font-bold text-2xl select-none bg-white text-black rounded-2xl p-2 ">
             {targetedCaptcha}
         </div>
 
@@ -76,14 +76,24 @@ function Logout()
             <br />
             {error.length > 0 && <div className="font-semibold text-red-700 text-lg">{error}<br/></div>}
             <div className="flex justify-center">
-                <Button name="LOG-OUT" type="submit" />
+                <button
+                type="submit"
+                className="font-bold w-1/2 text-2xl rounded-2xl p-2 text-black bg-red-600"
+                >
+                    LOGOUT
+                </button>
             </div>
         </form>
         </div>
-        </div>
-        </div>
     </div>
+    
+            </div>
+        </div>
   )
 }
 
 export default Logout
+
+
+
+

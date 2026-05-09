@@ -1,69 +1,54 @@
+
 import { NavLink } from "react-router"
 
-interface Link
+interface LinkStructure
 {
-  name: string
-  path: string
+    name: string
+    path: string
 }
 
 
 function Header()
 {
-  const links:Link[] = [
-  {
-    name: 'All-Todos',
-    path: '/'
-  },
-  
-  {
-    name: 'Add-Todo',
-    path: '/addtodo'
-  },
-
-  {
-    name: 'Todos-Summery',
-    path: '/summery'
-  },
-
-  {
-    name: 'Todo-Searching',
-    path: '/searchengine'
-  },
-
-  {
-    name: 'Contact-Me',
-    path: '/contact'
-  },
-
-  {
-    name: 'Logout',
-    path: '/logout'
-  }
-
-  ]
-
-  return (
-    <div>
-      <div className="flex justify-between text-white p-6 bg-gray-950 pl-2 pr-2  ">
+    const links:LinkStructure[] = 
+    [
         {
-          links.map(link =>
-          {
-            return(
-            <div key={link.name}>
-              <NavLink
-              to={link.path}
-              className={({isActive}) => `font-bold text-xl gap-2 ${isActive ? 'text-green-400' : ''}  `}
-              >
-                {link.name}
-              </NavLink>
-            </div>
+            name: 'Converter',
+            path: ''
+        },
+        {
+            name: 'History',
+            path: '/history'
+        },
+        {
+            name: 'Logout',
+            path: '/logout'
+        },
+    ]
+
+
+  return(
+    <div>
+        <div className="p-6 font-bold flex justify-evenly gap-10 bg-pink-400 ">
+        {
+            links.map(link =>
+            {
+                return(
+                <NavLink
+                to={link.path}
+                className={({isActive}) => `font-bold text-2xl ${isActive ? 'text-cyan-500' : 'text-white'}`}
+                >
+                    {link.name}
+                </NavLink>
+                )
+            }
             )
-          }
-          )
         }
-      </div>
+        </div>
     </div>
   )
 }
 
 export default Header
+
+

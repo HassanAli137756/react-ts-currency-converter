@@ -1,10 +1,11 @@
 import { useState } from "react"
 import { useNavigate } from "react-router"
-import { login } from "../Redux/AuhtSlice"
 import { useDispatch } from "react-redux"
+import { login } from "../Redux/AuthSlice"
 import Input from "../components/Input"
-import {useForm} from 'react-hook-form'
-import Button from "../components/Button"
+
+import { useForm } from 'react-hook-form'
+
 
 function Login()
 {
@@ -28,26 +29,27 @@ function Login()
   }
 
   return(
-    <div className="flex justify-center ">
-      <div>
-
-        <form className="bg-black/50 p-15 rounded-2xl" onSubmit={handleSubmit(createAccount)}>
+    <div>
+        <div className="flex  justify-center">
+        
+        <div className="rounded-2xl p-10 w-1/2 bg-white/50 ">    
+        <form onSubmit={handleSubmit(createAccount)}>
             <Input
             label="Name"
             name="name"
             register={register}
             placeholder="Enter Name..."
-            
+
             />
             <br />
 
             <Input
-            label="Password"
+            label="Email"
             name="email"
             type="email"
             register={register}
-            placeholder="Enter Password..."
-            />
+            placeholder="Enter Email..."
+             />
             <br />
 
             <Input
@@ -56,22 +58,27 @@ function Login()
             type="password"
             register={register}
             placeholder="Enter Password..."
-            />
+             />
              <br /><br />
 
             {error.length > 0 && <div>{error}</div>}
 
              <div className="flex justify-center">
-
-              <div>
-                  <Button  name="LOGIN" type="submit" />
-              </div>
-
-             </div>
+                <button
+                type="submit"
+                className="font-bold w-1/2 text-white text-2xl rounded-2xl p-2 bg-green-600"
+                >
+                    LOGIN
+                </button>
+            </div>
         </form>
     </div>
-    </div>
+    
+          </div>
+        </div>
   )
 }
 
 export default Login
+
+

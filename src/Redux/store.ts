@@ -1,13 +1,15 @@
+
 import { configureStore } from "@reduxjs/toolkit";
-import { authReducer } from "./AuhtSlice";
-import { todoReducer } from "./TodoSlice";
+import { conversionReducer } from "./ConversionHistory";
+import { authReducer } from "./AuthSlice";
 
 export const store = configureStore(
 {
     reducer:
     {
-        authReducer: authReducer,
-        todoReducer: todoReducer
+        historyReducer: conversionReducer,
+        authReducer: authReducer
     }
 }
 )
+

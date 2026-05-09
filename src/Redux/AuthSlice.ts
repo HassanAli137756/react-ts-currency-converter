@@ -1,3 +1,4 @@
+
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 
 
@@ -16,7 +17,11 @@ if(rawData && rawData.length > 0)
     userData = JSON.parse(rawData) as loginStructure
 }
 
-console.log(localStorage.getItem('userLoginInfor'));
+const storeUserInfo = (data:loginStructure) =>
+{
+    localStorage.setItem('userLoginInfor', JSON.stringify(data ))
+}
+
 
 
 export const authSlice = createSlice(
@@ -31,13 +36,14 @@ export const authSlice = createSlice(
         login: (state, action:PayloadAction<loginStructure>) =>
         {
             state.loginData = action.payload
-            localStorage.setItem('userLoginInfor', JSON.stringify(action.payload ))
+           storeUserInfo(state.loginData)
         },
 
         logout: (state) =>
         {
             state.loginData = {email: '', name: '', password: ''}
-            localStorage.setItem('userLoginInfor', '')
+            storeUserInfo(state.loginData)
+
 
         }
     }
@@ -49,3 +55,4 @@ export const authSlice = createSlice(
 
 export const {login, logout}  = authSlice.actions
 export const authReducer = authSlice.reducer
+

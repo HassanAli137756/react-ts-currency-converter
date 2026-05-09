@@ -1,4 +1,6 @@
-import {type UseFormRegister, type FieldValues}  from 'react-hook-form'
+
+
+import { type UseFormRegister, type FieldValues } from 'react-hook-form';
 
 
 interface InputProps
@@ -8,18 +10,17 @@ interface InputProps
     name?: string
     type?: string
     classes?: string
-    onChange?: (value: string) => void
     register?: UseFormRegister<FieldValues>
 }
 
 
-function Input({classes, label, onChange, type,  name, placeholder, register}:InputProps)
+function Input({classes, label, type,  name, placeholder, register}:InputProps)
 {
   return (
     <div>
         {label && label.length > 0 &&
         <div>
-            <div className='flex justify-start font-bold text-2xl'>
+            <div className='flex justify-start text-black font-bold text-2xl'>
 
                 <label htmlFor={label}>{label}</label>
 
@@ -27,12 +28,12 @@ function Input({classes, label, onChange, type,  name, placeholder, register}:In
         </div>
         }
         <input 
-        onChange={(e) => onChange ? onChange(e.target.value) : null}
+        
         type={type ? type : 'text'}
         placeholder={placeholder ? placeholder : undefined}
         id={label ? label : undefined}
         {...(register ? register(name ? name : '', {required: 'This field is required'}) : console.log('No register provided'))}
-        className={`font-bold rounded-2xl w-full p-2 pl-2 text-2xl bg-white text-black ${classes}`}
+        className={`font-bold rounded-2xl w-full p-2 pl-1 text-xl bg-white text-black ${classes}`}
 
         />
     </div>
@@ -40,3 +41,4 @@ function Input({classes, label, onChange, type,  name, placeholder, register}:In
 }
 
 export default Input
+
