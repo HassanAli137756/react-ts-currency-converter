@@ -20,9 +20,9 @@ function HistoryCard({histories}:HistoryProps)
             histories.map(history =>
             {
                 return(
-                <div key={history.id}>
-                    <div  className=" rounded-2xl pl-2 bg-black p-6 flex justify-center ">
-                    <div>
+                <div className=" rounded-2xl pl-2 bg-black p-6 flex justify-center " key={history.id}>
+                    <div  >
+                    
 
                         <div>
                             <div className="font-bold text-2xl italic underline text-green-500">
@@ -35,7 +35,7 @@ function HistoryCard({histories}:HistoryProps)
                             <div>From-Country: &nbsp;&nbsp; <span>{history.fromCountry}</span></div> <br />
                             <div>To-Country: &nbsp;&nbsp; <span>{history.toCountry}</span></div> <br />
                             <div>Input-Currency: &nbsp;&nbsp; <span>{history.valueToConvert}</span></div> <br />
-                            <div className="font-bold text-indigo-500 italic">Result: &nbsp;&nbsp; <span>{history.convertedValue}</span></div> <br />
+                            <div className="font-bold text-indigo-500 italic">Result: &nbsp;&nbsp; <span>{history.convertedValue.toFixed(3)+'...'}</span></div> <br />
                         </div>
                         <br />
                         <div className="flex justify-center">
@@ -46,7 +46,7 @@ function HistoryCard({histories}:HistoryProps)
                             </button>
                         </div>
 
-                    </div>
+                    
                 </div>
                 </div>
                 )

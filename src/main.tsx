@@ -10,6 +10,7 @@ import { store } from './Redux/store'
 import Logout from './AutherService/Logout'
 import Login from './AutherService/Login'
 import History from './components/History'
+import ContactMe from './components/ContactMe'
 
 
 
@@ -18,6 +19,7 @@ createRoutesFromElements(
 <Route path='' element={<ProtectedLayout />}>
     <Route path='/' element={<Converter />} />
     <Route path='/history' element={<History />} />
+    <Route path='/contact' element={<ContactMe />} />
     <Route path='/logout' element={<Logout />} />
     <Route path='/login' element={<Login />} />
 </Route>

@@ -36,7 +36,7 @@ function ProtectedLayout()
         <div >
             <div className="flex justify-center">
             <div
-            className=" w-full text-3xl text-red-600 italic font-bold">
+            className=" text-3xl text-red-600 italic font-bold">
                 Please Login To Use Service
             </div>
             </div>

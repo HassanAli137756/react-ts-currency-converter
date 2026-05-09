@@ -168,7 +168,7 @@ export function Converter()
                     <input
                     className=" font-bold text-2xl bg-gray-700 text-white rounded-2xl p-2 pl-3 "
                     value={valueToConvert}
-                    onChange={(e) => (setValueToConvert(Number(e.target.value)), !newConversion ? setNewConversion(true) : null)}
+                    onChange={(e) => (setValueToConvert(Number(e.target.value)), Number(e.target.value) > 0 ? setNewConversion(true) : null)}
                     type="number" />
                 </div>
             </div>

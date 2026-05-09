@@ -21,6 +21,10 @@ function Header()
             path: '/history'
         },
         {
+            name: 'Contact-Me',
+            path: '/contact'
+        },
+        {
             name: 'Logout',
             path: '/logout'
         },
@@ -35,6 +39,7 @@ function Header()
             {
                 return(
                 <NavLink
+                key={link.path}
                 to={link.path}
                 className={({isActive}) => `font-bold text-2xl  ${isActive ? 'text-cyan-500' : 'text-white'} hover:text-cyan-200  transition-all duration-300`}
                 >
