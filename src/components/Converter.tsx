@@ -187,13 +187,10 @@ export function Converter()
             <br />
             <div className="flex justify-center">
                 <div className="font-bold text-2xl italic text-green-600">
-                    ConvertedValue: <span>{convertedValue}</span>
+                    Results: <span>{convertedValue}</span>
                 </div>
             </div>
             
-<div className="text-[14px] md:text-[18px] lg:text-[22px]">
-  Doctor Appointment
-</div>
         
     </div>
     )
