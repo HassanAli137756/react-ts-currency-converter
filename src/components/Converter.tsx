@@ -191,7 +191,9 @@ export function Converter()
                 </div>
             </div>
             
-
+<div class="text-[14px] md:text-[18px] lg:text-[22px]">
+  Doctor Appointment
+</div>
         
     </div>
     )
