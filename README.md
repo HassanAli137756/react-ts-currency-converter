@@ -17,9 +17,7 @@ A high-performance currency conversion application built with a focus on speed, 
 *   **Styling:** Modern CSS (Responsive Design)
 
 ## 🚀 Getting Started
-1. **Clone the repo:** `git clone https://github.com`
-2. **Install dependencies:** `npm install`
-3. **Run the app:** `npm run dev`
+*Go on this link for live view of this application* https://react-ts-currency-converter.vercel.app/
 
 ---
 **Developed with ❤️ by Hassan Ali**
