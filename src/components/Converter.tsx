@@ -183,7 +183,7 @@ export function Converter()
                     </button>
                 </div>
             </div>
-            {error.length > 0 && <div className="font-bold italic text-2xl text-red-700">{error}</div>}
+            {error.length > 0 && <div class name="flex justify-center"><div className="font-bold italic text-2xl text-red-700">{error}</div><div />}
             <br />
             <div className="flex justify-center">
                 <div className="font-bold text-2xl italic text-green-600">
